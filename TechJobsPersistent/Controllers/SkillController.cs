@@ -43,8 +43,11 @@ namespace TechJobsPersistent.Controllers
                 context.SaveChanges();
                 return Redirect("/Skill/");
             }
+            else
+            {
+                return View("Add", skill);
+            }
 
-            return View("Add", skill);
         }
 
         public IActionResult AddJob(int id)
